@@ -36,4 +36,16 @@ Se pide:
 */
 
 let n = 15;
-let numeros = newArray();
+let fibonacci = new Array();
+
+fibonacci[0] = 0;
+fibonacci[1] = 1;
+
+for (let i = 2; i < n; i++) {
+    fibonacci[i] = fibonacci[i - 2] + fibonacci [i - 1];
+    fibonacci.push(fibonacci[i]);
+    fibonacci.pop();
+}
+console.log(fibonacci);
+
+
