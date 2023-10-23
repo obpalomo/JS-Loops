@@ -66,14 +66,17 @@ let placesToTravel2 = [{id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 2
 /* for (let i = 0; i <= placesToTravel2.length; i++) {
     if (placesToTravel2[i].id === 11 || placesToTravel2[i].id === 40) {
         placesToTravel2.splice(i,1);
+        i--;
     }
-} */ /* Inicial planteado */
+} */
 
 for (let i = placesToTravel2.length - 1; i >= 0; i--) {
     if (placesToTravel2[i].id === 11 || placesToTravel2[i].id === 40) {
         placesToTravel2.splice(i, 1);
     }
 }
+
+
 console.log('Ejercicio 5', placesToTravel2)
 
 
@@ -100,14 +103,21 @@ console.log('Ejercicio 6', toys);
 /*
 EJERCICIO 7: (NOTION)
 Usa un bucle **for...of** para recorrer todos los juguetes y añade los que tengan más de 15 ventas (sellCount) al array popularToys. Imprimelo por consola.. Puedes usar este array:
-*/
-/* const popularToys = [];
-const toys2 = [
+/* /* */
+
+let popularToys = [];
+let toys2 = [
 	{id: 5, name: 'Buzz MyYear', sellCount: 10},
 	{id: 11, name: 'Action Woman', sellCount: 24},
 	{id: 23, name: 'Barbie Man', sellCount: 15},
 	{id: 40, name: 'El gato con Guantes', sellCount: 8},
 	{id: 40, name: 'El gato felix', sellCount: 35}
-] */
+]
 
+for(let toy of toys) {
+    if (toy.sellCount >15); {
+        popularToys.push(toy);
+    }
+}
+console.log('Ejercicio 7', popularToys)
 
